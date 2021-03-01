@@ -21,6 +21,7 @@ private let hostName            = "api.nytimes.com/"
 
 private let serviceDirectory1         = "svc/"
 private let serviceDirectory2         = "svc/"
+private let apiKey = "sV04leG467xE60LtpWUC6Ie7pMjPPQaw"
 
 
 class Connectivity {
@@ -156,7 +157,6 @@ class RestClient{
             // show loading view
             if loaderEnabled {
                 DispatchQueue.main.async {
-                   // kahramaaLoader.showForTask(with: apiKey)
                 }
             }
             
@@ -166,7 +166,6 @@ class RestClient{
                     // hide loading view
                     if loaderEnabled{
                         DispatchQueue.main.async {
-                            //kahramaaLoader.hideForTask(with: apiKey)
                         }
                     }
                     

@@ -1184,7 +1184,6 @@ struct SectionsDataResponseModel: Decodable {
         ]
     }
     """.data(using: .utf8)!
-    
 }
 
 struct SectionDataResponseModel: Decodable {
