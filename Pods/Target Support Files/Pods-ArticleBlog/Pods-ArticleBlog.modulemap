@@ -1,0 +1,6 @@
+framework module Pods_ArticleBlog {
+  umbrella header "Pods-ArticleBlog-umbrella.h"
+
+  export *
+  module * { export * }
+}
