@@ -20,7 +20,6 @@ class ArticleTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        articleImageView.addRoundedCorner(30)
         // Initialization code
     }
 
@@ -30,14 +29,18 @@ class ArticleTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        articleImageView.addRoundedCorner(articleImageView.frame.size.height / 2)
+    }
+    
     
     func setValues(imageURL: String, headline:String, byLabel: String) {
-//        if let url = URL(string: imageURL) {
-//            articleImageView.af.setImage(withURL: url)
-//        }
-//        headlineLabel.text = headline
-//        self.byLabel.text = byLabel
-        articleImageView.addRoundedCorner(30)
+        if let url = URL(string: imageURL) {
+            articleImageView.af.setImage(withURL: url)
+        }
+        headlineLabel.text = headline
+        self.byLabel.text = byLabel
     }
     
 }

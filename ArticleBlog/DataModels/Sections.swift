@@ -1209,6 +1209,30 @@ struct SectionDataResponseModel: Decodable {
     var geoFacet: [String]?
     var media: [Media]?
     var etaId: Int?
+    
+    private enum CodingKeys: String, CodingKey {
+        case uri                   = "uri"
+        case url                = "url"
+        case id                = "id"
+        case assetId              = "asset_id"
+        case source = "source"
+        case publishedDate          = "published_date"
+        case updatedDate          = "updated"
+        case section          = "section"
+        case subsection          = "subsection"
+        case nytdsection          = "nytdsection"
+        case adxKeywords          = "adx_keywords"
+        case byLine          = "byline"
+        case type          = "type"
+        case title          = "title"
+        case abstract          = "abstract"
+        case desFacet          = "des_facet"
+        case orgFacet          = "org_facet"
+        case perFacet          = "per_facet"
+        case geoFacet          = "geo_facet"
+        case media          = "media"
+        case etaId          = "eta_id"
+    }
 
     // use the below standard during debug
     static let sample = """

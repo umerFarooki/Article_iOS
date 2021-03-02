@@ -41,7 +41,7 @@ class ArticlesViewController: UIViewController {
 extension ArticlesViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel?.dataSource?.results?.count ?? 10
+        return viewModel?.dataSource?.results?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

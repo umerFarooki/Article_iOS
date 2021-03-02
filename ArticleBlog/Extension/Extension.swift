@@ -37,6 +37,7 @@ extension UIColor {
 extension UIView {
     
     func addRoundedCorner(_ radious : CGFloat){
+        self.layer.masksToBounds = true
         self.layer.cornerRadius  = radious
     }
     
