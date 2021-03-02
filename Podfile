@@ -9,7 +9,7 @@ target 'ArticleBlog' do
   
   # Alamofire and AlamofireImage
   #  For safe networking and efficient image downloading and caching
-  pod 'AlamofireImage'
+  pod 'AlamofireImage', '4.1.0'
 
   target 'ArticleBlogTests' do
     inherit! :search_paths

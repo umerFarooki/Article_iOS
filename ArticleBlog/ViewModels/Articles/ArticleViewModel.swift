@@ -22,8 +22,8 @@ class ArticleViewModel {
     
     func loadSections() {
         
-        RestClient.getRequestForJSON(apiKey: "mostpopular/v2/mostviewed/all-sections/7.json?api-key=sV04leG467xE60LtpWUC6Ie7pMjPPQaw",
-                                      serviceScheme: KahramaaServiceScheme.articleSearch,
+        RestClient.getRequestForJSON(apiKey: mostReviewedArticlesRoute,
+                                      serviceScheme: ArticleServiceScheme.articleSearch,
                                       kahramaaResponseModel: SectionsDataResponseModel.self,
                                       //debugSampleJson :  CustomerLoginResponseModel.sample,
         loaderEnabled : true) { (success, json, message) in

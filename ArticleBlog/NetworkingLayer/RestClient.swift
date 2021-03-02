@@ -31,25 +31,25 @@ class Connectivity {
     }
 }
 
-struct KahramaaScheme {
+struct ArticleScheme {
     let baseURL : String
     var header : HTTPHeaders
 }
 
 // make it easy to handle different REST service configuration
-enum KahramaaServiceScheme {
+enum ArticleServiceScheme {
     
     case articleSearch
     case articleReviews
     
-    func getRequestProperties()->KahramaaScheme{
+    func getRequestProperties()-> ArticleScheme{
         switch self {
         case .articleSearch:
             
-            return KahramaaScheme(baseURL: httpProtocol + hostName + serviceDirectory1 ,
+            return ArticleScheme(baseURL: httpProtocol + hostName + serviceDirectory1 ,
                                   header: [HTTPHeader(name: "Content-Type", value: "application/json")])
         case .articleReviews:
-            return KahramaaScheme(baseURL: httpProtocol + hostName + serviceDirectory2 ,
+            return ArticleScheme(baseURL: httpProtocol + hostName + serviceDirectory2 ,
                                   header: [HTTPHeader(name: "Content-Type", value: "application/json")])
             
         }
@@ -85,7 +85,7 @@ class RestClient{
         //MARK: - get request for REST services
         static func getRequestForJSON < T :Decodable  > ( apiKey : String,
                                                           overrideServiceURL : String? = nil,
-                                                          serviceScheme : KahramaaServiceScheme,
+                                                          serviceScheme : ArticleServiceScheme,
                                                           kahramaaResponseModel : T.Type,
                                                           debugSampleJson : Data? = nil,
                                                           loaderEnabled : Bool = true,
